@@ -16,7 +16,12 @@
     <script>
     window.onload=function(){
         var oBox=document.getElementById('box');
-        
+        oBox.onmousedown=function(ev){
+            var disX=ev.clientX-this.offsetLeft;
+            var disY=ev.clientY-this.offsetTop;
+            
+        }
+
     }
     </script>
 </head>
