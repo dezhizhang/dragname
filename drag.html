@@ -19,8 +19,18 @@
         oBox.onmousedown=function(ev){
             var disX=ev.clientX-this.offsetLeft;
             var disY=ev.clientY-this.offsetTop;
+            document.onmousemove=function(ev){
+                oDiv.style.left=ev.clientX-that.disX+'px'
+                oDiv.style.top=ev.clientY-that.disY+'px';
+            }
+            document.onmouseup=function(){
+            document.onmousemove=null;
+            document.onmousedown=null;
+
+        }
             
         }
+        
 
     }
     </script>
